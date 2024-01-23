@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>News Feed</title>
+</head>
+
+<header>
+    <div class = "header">
+        <img src = "{{ url_for('static', filename = 'images/logo.svg') }}">
+        <h1>Emerging Technology & Innovation News</h1>
+    </div> 
+</header>
+
+<body>
+    <div class = 'homepage'>
+
+        <div class = 'headline'>
+            <p class = 'title'>Latest News</p>
+            <p class = 'description'>Keep up to date with the latest news and developments in the emerging technology landscape.</p>
+        </div>
+
+        <div class = 'main'>
+
+            <div class = 'filter'>
+                <p class=topics>Topics</p>
+                <ul>
+                    <li><a href = "{{ url_for('index') }}">All</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = '5G') }}">5G</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'AI') }}">Artificial Intelligence</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Award') }}">Award</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Banking as a Service') }}">Banking-as-a-Service</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Biometrics') }}">Biometrics</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'blockchain') }}">Blockchain</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Central Bank Digital Currency') }}">CBDC</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Cloud') }}">Cloud</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Cybersecurity') }}">Cybersecurity</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Crypto') }}">Cryptocurrency</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Decentralized ID') }}">Decentralized ID</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Decentralized Finance') }}">Decentralized Finance</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Digital') }}">Digital</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Digital ID') }}">Digital ID</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Digital Lending') }}">Digital Lending</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Embedded Banking') }}">Embedding Banking</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Fines') }}">Fines</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'FinTech') }}">FinTech</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Tech Innovation') }}">Tech Innovation</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Metaverse') }}">Metaverse</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'NFTs') }}">NFTs</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Open Banking') }}">Open Banking</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Passwordless Authentication') }}">Passwordless Authentication</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Payments') }}">Payments</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Quantum Computing') }}">Quantum Computing</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Real-Time Payments') }}">Real-Time Payments</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Sustainability') }}">Sustainability</a></li>
+                    <li><a href = "{{ url_for('filter', article_tag = 'Tech Talent') }}">Tech Talent</a></li>                  
+
+                </ul>
+            </div>
+
+            <div class = 'news'>
+                {% for article in pagination.items %}
+                    <section class = "card">
+                        <div class = "col">
+                            <div class = "card-body">
+                                <a href = "{{ article.link }}">
+                                    <h3 class = "card-title">{{ article.title }}</h3>
+                                </a>
+                                <!-- <img class = news-image src = "./static/images/stock/{{article.tag}}.jpg"> -->
+                                <p class = "card-tag">Tag: {{ article.tag }}</p>
+                                <p class = "card-date">Published on: {{ article.pub_date }}</p>
+                                <p class = "card-description">{{ article.description }}</p>
+                            </div>
+                        </div>
+                    </section>
+                    {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <div class=pagination>
+                
+        {% if pagination.has_prev %}
+        <span>
+            <a class='page-number' href="{{ url_for('index', page=pagination.prev_num) }}">
+                {{ '<<' }}
+            </a>
+        </span>
+        {% endif %}
+
+        {% for page in pagination.iter_pages() %}
+            {% if page %}
+                {% if page != pagination.page %}
+                    <span>
+                        <a class='page-number'
+                            href="{{ url_for('index', page=page) }}">
+                        {{ page }}
+                        </a>
+                    </span>
+                {% else %}
+                    <span class='current-page-number'>{{ page }}</span>
+                {% endif %}
+            {% else %}
+                <span class=ellipsis>…</span>
+            {% endif %}
+        {% endfor %}
+        
+        {% if pagination.has_next %}
+        <span>
+            <a class='page-number' href="{{ url_for('index', page=pagination.next_num) }}">
+                {{ '>>' }}
+            </a>
+        </span>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>
+

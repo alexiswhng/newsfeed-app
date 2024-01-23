@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+/* header */
+
+.header {
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    background: #0075BE;
+    height: 80px;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.header img {
+    width: auto; 
+    height: 100%; 
+    margin-right: 10px; 
+}
+
+.header h1 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    vertical-align: top;
+    margin: 0;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .header img {
+        width: 120px; 
+        height: 34px; 
+        margin-right: 5px; 
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; 
+}
+
+.profile img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 100px; 
+}
+
+.credentials {
+    margin-top: 40px; 
+    text-align: left;
+}
+
+.credentials label {
+    display: block;
+    margin-bottom: 10px;
+    color: #0075BE;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.credentials input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 418px;
+    height: 55px;
+    fill: #FFF;
+    stroke-width: 2px;
+    stroke: #B4B4B4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 20px; 
+}
+
+.button {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 20px; 
+    padding: 10px;
+    background-color: #0075BE; 
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 16px;
+    text-decoration: none; /* Remove underline for anchor element styling */
+    text-align: center;
+}
+

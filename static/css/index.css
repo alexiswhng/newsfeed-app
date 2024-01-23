@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import "sign-in.css";
+
+/* headline & description  */
+.headline{
+    padding: 20px;
+}   
+
+.title{
+    color: #0075BE;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.description{
+    color: #646C76;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main{
+    width:100%;
+}
+
+/* filter */
+
+.filter{
+    width: 18%;
+    height: 900px;
+    float: left;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-inline-start: 5px;
+}
+
+.topics{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 20px;
+}
+
+ul {
+    list-style: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 20px;
+}
+
+li{
+    margin: 10px 0;
+}
+
+
+/* news */
+
+.news{
+    margin-left: 20%;
+}
+.card-body{
+    min-width: 1000px;
+    min-height: 160px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-title{
+    color: #0079C1;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-tag{
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 20px;
+}
+
+
+.card-date{
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 20px;
+}
+
+.card-description{
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+/* page numbers */
+
+.pagination {
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.pagination span {
+    margin-right: 10px;
+}
+
+.page-number {
+    padding: 5px;
+    text-decoration: none;
+    color: #0079C1;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.current-page-number {
+    color: #666;
+    padding: 5px;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
