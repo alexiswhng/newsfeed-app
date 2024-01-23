@@ -26,7 +26,7 @@ def relevancy(text):
     return pred.item()
 
 # Set your OpenAI API key
-api_key = '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'
+api_key = ''
 openai.api_key = api_key
 
 keywords = ['5G', 'AI', 'Award', 'Banking as a Service', 'Biometrics',
