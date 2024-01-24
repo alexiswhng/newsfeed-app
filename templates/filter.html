@@ -7,12 +7,16 @@
     <title>News Feed</title>
 </head>
 
-<body>
-
+<header>
     <div class = "header">
-        <img src = "{{ url_for('static', filename = 'images/logo.svg') }}">
+        <a href="{{ url_for('index') }}" class="logo">
+            <img src = "{{ url_for('static', filename = 'images/logo.svg') }}">
+        </a>
         <h1>Emerging Technology & Innovation News</h1>
     </div> 
+</header>
+
+<body>
 
     <div class = 'homepage'>
 

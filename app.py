@@ -36,7 +36,7 @@ def topics():
 def index():
     page = request.args.get('page', 1, type=int)
     pagination = Article.query.order_by(Article.pub_date.desc()).paginate(page=page, per_page=10)
-    return render_template('index.html', pagination=pagination)
+    return render_template('index[wip].html', pagination=pagination)
 
 @app.route('/<article_tag>/')
 def filter(article_tag):

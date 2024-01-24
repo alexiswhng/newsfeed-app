@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import "sign-in.css";
+
+.header-2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #1C5D86;
+    height: 60px; 
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.header-2 a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 18px; 
+    margin-right: 70px; 
+    margin-left: 70px; 
+    
+}
+
+.search-bar {
+    margin-left: auto;
+}
+
+.search-bar input {
+    width: 300px; 
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    margin-right: 70px;
+}
+
+/* headline */
+.main-title{
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 100px; 
+    margin-left: 100px; 
+}
+
+.main-description{
+    color: #646C76;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 100px; 
+    margin-left: 100px; 
+}
+
+/* news cards */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.news .card {
+    flex: 0 1 calc(30% - 20px); /* Adjust the width of each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.news .card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust the maximum height of the image */
+    object-fit: cover;
+}
+
+.news .card-content {
+    padding: 20px;
+}
+
+.news .keyword {
+    color: #0075BE;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.news .title {
+    color: #333;
+    font-size: 24px;; /* Adjust the font size of the title */
+    margin-bottom: 12px;
+}
+
+.news .description {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.news .date {
+    color: #999;
+    font-size: 14px; 
+    margin-bottom: 0;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1500px;
+  margin-block: 32px;
+  gap: 32px;
+  margin-left: 55px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background: #FFFFFF;
+
+}
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* gap: .5rem; */
+  font-family: Inter;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+}
+
+.tag + .tag {
+  /* margin-left: .5em; */
+  margin-left: 10px;
+}
+
+.tag-red {
+  background: #cb2d3e;
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info > small {
+font-family: Inter;
+  color: #666;
+}

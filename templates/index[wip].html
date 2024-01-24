@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index[wip].css') }}">
+    <title>News Feed</title>
+</head>
+
+<header>
+    <div class = "header">
+        <img src = "{{ url_for('static', filename = 'images/logo.svg') }}">
+        <h1>Emerging Technology & Innovation News</h1>
+    </div> 
+</header>
+
+<body>
+    <div class="header-2">
+        <a href="{{ url_for('index') }}">Home</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search articles">
+        </div>
+    </div>
+
+    <div class = 'headline'>
+        <p class = 'main-title'>Latest News</p>
+        <p class = 'main-description'>Keep up to date with the latest news and developments in the emerging technology landscape.</p>
+    </div>
+    
+    <!--<div class = "card-container">
+        {% for article in pagination.items %}
+        <div class="news">
+            <img src="{{ url_for('static', filename = 'images/stock/payments.jpg') }}"alt="Card Image">
+            <div class="card-content">
+                <p class="keyword">{{ article.tag }}</p>
+                <h2 class="title">{{ article.title }}</h2>
+                <p class="description">{{ article.description }}</p>
+                <p class="date">{{ article.pub_date }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>-->
+    <div class="container">
+        {% for article in pagination.items %}
+        <div class="card">
+          <div class="card__header">
+            <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+          </div>
+          <div class="card__body">
+            <span class="tag tag-red">{{ article.tag }}</span>
+            <h4>{{ article.title }}</h4>
+            <p>{{ article.description }}</p>
+          </div>
+          <div class="card__footer">
+            
+            <div class="user">
+              <div class="user__info">
+                <small>Published on {{ article.pub_date }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+</body>
+
+</html>
