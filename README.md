@@ -1,3 +1,7 @@
-# newsfeed-app
+# News Feed App
 
-WIP
+Tools and Framework
+
+- Python Flask
+- SQLite DB
+- OpenAI API
